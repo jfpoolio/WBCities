@@ -43,6 +43,32 @@ class LaunchframeSite extends TimberSite {
 	}
 	function register_post_types() {
 		//this is where you can register custom post types
+		//Cities custom post type
+		$labels = array(
+	    'name'               => _x( 'Cities', 'post type general name' ),
+	    'singular_name'      => _x( 'City', 'post type singular name' ),
+	    'add_new'            => _x( 'Add New', 'city' ),
+	    'add_new_item'       => __( 'Add New City' ),
+	    'edit_item'          => __( 'Edit City' ),
+	    'new_item'           => __( 'New City' ),
+	    'all_items'          => __( 'All Cities' ),
+	    'view_item'          => __( 'View City' ),
+	    'search_items'       => __( 'Search Cities' ),
+	    'not_found'          => __( 'No cities found' ),
+	    'not_found_in_trash' => __( 'No cities found in the Trash' ), 
+	    'parent_item_colon'  => '',
+	    'menu_name'          => 'Cities'
+	  );
+	  $args = array(
+	    'labels'        => $labels,
+	    'description'   => 'Holds Cities with their associated information.',
+	    'public'        => true,
+	    'menu_position' => 5,
+	    'supports'      => array( 'title', 'editor', 'thumbnail'),
+	    'menu_icon' => 'dashicons-location-alt',
+	    'has_archive'   => true,
+	  );
+	  register_post_type( 'city', $args ); 		
 	}
 	function register_taxonomies() {
 		//this is where you can register custom taxonomies
