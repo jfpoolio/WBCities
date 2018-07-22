@@ -1,0 +1,10 @@
+{
+  "globals": {
+    "window": true,
+    "jQuery": true,
+    "document": true
+  },
+  "rules" : {
+    "no-unused-vars":0,
+  }
+}
