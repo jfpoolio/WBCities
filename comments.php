@@ -4,7 +4,15 @@
  *
  * This is the template that displays the area of the page that contains both the current comments
  * and the comment form.
- 
+ *
+ * @link https://codex.wordpress.org/Template_Hierarchy
+ *
+ * @package WordPress
+ * @subpackage Twenty_Seventeen
+ * @since 1.0
+ * @version 1.0
+ */
+
 /*
  * If the current post is protected by a password and
  * the visitor has not yet entered the password we will
@@ -16,6 +24,7 @@ if ( post_password_required() ) {
 ?>
 
 <div id="comments" class="comments-area">
+
 	<?php
 	// You can start editing here -- including this comment!
 	if ( have_comments() ) : ?>
@@ -24,7 +33,7 @@ if ( post_password_required() ) {
 			$comments_number = get_comments_number();
 			if ( '1' === $comments_number ) {
 				/* translators: %s: post title */
-				printf( _x( 'One Reply to &ldquo;%s&rdquo;', 'comments title', 'launchframe' ), get_the_title() );
+				printf( _x( 'One Reply to &ldquo;%s&rdquo;', 'comments title', 'twentyseventeen' ), get_the_title() );
 			} else {
 				printf(
 					/* translators: 1: number of comments, 2: post title */
@@ -33,7 +42,7 @@ if ( post_password_required() ) {
 						'%1$s Replies to &ldquo;%2$s&rdquo;',
 						$comments_number,
 						'comments title',
-						'launchframe'
+						'twentyseventeen'
 					),
 					number_format_i18n( $comments_number ),
 					get_the_title()
