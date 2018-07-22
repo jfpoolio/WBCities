@@ -68,7 +68,7 @@ class LaunchframeSite extends TimberSite {
 	    'menu_icon' => 'dashicons-location-alt',
 	    'has_archive'   => true,
 	  );
-	  register_post_type( 'city', $args ); 		
+	  register_post_type( 'cities', $args ); 		
 	}
 	function register_taxonomies() {
 		//this is where you can register custom taxonomies
