@@ -10,10 +10,37 @@
 				</p>
 				<div class="article-body">
 					{{post.content}}
-					{% if post.thumbnail.src %}
-						<img src="{{post.thumbnail.src}}" />
-					{% endif %}
 				</div>
+				<dl>
+					<dt>
+						Region:						
+					</dt>
+					<dd>
+						{{post.get_field('city_region')}}
+					</dd>
+					<dt>
+						Population:			
+					</dt>
+					<dd>
+						{{post.get_field('city_population')}}
+					</dd>
+					<dt>
+						Latitude:	
+					</dt>
+					<dd>
+						{{post.get_field('city_latitude')}}
+					</dd>
+					<dt>
+						Longitude:		
+					</dt>
+					<dd>
+						{{post.get_field('city_latitude')}}
+					</dd>
+				</dl>
+				{% if post.thumbnail.src %}
+					<img src="{{post.thumbnail.src}}" />
+				{% endif %}
+				
 			</section>
 			{{ function('comments_template') }}
 		</article>
